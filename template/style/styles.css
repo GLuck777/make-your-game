@@ -1,0 +1,402 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    overscroll-behavior-y: none;
+}
+
+#extra {
+    position: absolute;
+    background-image: url("/template/style/ressources/extra.png");
+    top: 126px;
+    width: 40px;
+    height: 20px;
+}
+
+#player {
+    background-image: url("/template/style/ressources/player.png");
+    height: 30px;
+    width: 60px;
+    background-repeat: no-repeat;
+    position: absolute;
+}
+
+.playerBullet,
+.monsterBullet {
+    position: absolute;
+    height: 11px;
+    width: 6px;
+}
+
+.playerBullet {
+    z-index: 4;
+    background-color: aqua;
+    border: 2px solid rgb(0, 20, 150);
+    border-radius: 5px 5px 0px 0px;
+    top: 95%;
+    transform: translateY(-50%);
+}
+
+#playerBullet0 {
+    left: 71%;
+}
+
+#playerBullet1 {
+    left: 73%;
+}
+
+#playerBullet2 {
+    left: 75%;
+}
+
+#playerBullet3 {
+    left: 77%;
+}
+
+#playerBullet4 {
+    left: 79%;
+}
+
+.monsterBullet {
+    background-color: crimson;
+    border: 2px solid rgb(150, 14, 42);
+    border-radius: 0px 0px 5px 5px;
+}
+
+#monsters {
+    position: absolute;
+}
+
+#flou,
+#interface,
+#pausetxt,
+#gameovertxt,
+#gamewintxt,
+#resumeBtn,
+#nextBtn,
+#form {
+    position: absolute;
+    visibility: hidden;
+}
+
+#form {
+    width: 100%;
+    height: 100%;
+}
+
+#form_score,
+#form_username,
+#formBtn {
+    position: absolute;
+}
+
+#formBtn {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+#form_username {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#flou {
+    z-index: 3;
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 90%;
+}
+
+#interface {
+    z-index: 5;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    background-image: url("/template/style/ressources/bg.png");
+    height: 70%;
+    width: 90%;
+    position: absolute;
+    border: 2vh double #aa1717;
+    border-radius: 20px;
+}
+
+#tuto {
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    transform: translateX(-50%);
+    width: 25%;
+    height: 40%;
+    background-repeat: round;
+}
+
+.btn_pause {
+    z-index: 4;
+    position: absolute;
+    cursor: pointer;
+    top: 95%;
+    transform: translateY(-100%);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#playBtn {
+    left: 11.11%
+}
+
+#continueBtn {
+    left: 33.33%
+}
+
+#scoreBtn {
+    left: 55.55%
+}
+
+#restartBtn {
+    left: 77.77%
+}
+
+#pausetxt {
+    z-index: 4;
+    color: #ffd81d;
+    position: absolute;
+    font-size: 8rem;
+    left: 50%;
+    top: 15%;
+    transform: translateX(-50%);
+}
+
+#gameovertxt {
+    z-index: 4;
+    color: #ffd81d;
+    position: absolute;
+    font-size: 8rem;
+    left: 50%;
+    top: 15%;
+    transform: translateX(-50%);
+}
+
+#gamewintxt {
+    z-index: 4;
+    color: #ffd81d;
+    position: absolute;
+    font-size: 8rem;
+    left: 50%;
+    top: 15%;
+    transform: translateX(-50%);
+}
+
+#resumetxt {
+    z-index: 4;
+    color: #ffd81d;
+    position: absolute;
+    font-size: 8rem;
+    left: 50%;
+    top: 15%;
+    transform: translateX(-50%);
+}
+
+#history {
+    background: rgba(0, 0, 0, 0.6);
+    width: 80%;
+    top: 22%;
+    height: 60%;
+    z-index: 4;
+    color: #d0c050;
+    position: absolute;
+    font-size: x-large;
+    overflow: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    visibility: hidden;
+}
+
+#form_score {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+    color: #d0c050;
+    font-size: 2rem;
+}
+
+#time,
+#score {
+    padding: 5px 5px 0px 5px;
+    top: 3%;
+    left: 2%;
+}
+
+#time,
+#score,
+.btn_pause,
+#formBtn,
+.btn_keys {
+    z-index: 3;
+    background: #ffd81d;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    box-shadow: 0px 0px 5px 5px #dd621e;
+    color: black;
+    position: absolute;
+    font-size: larger;
+}
+
+.btn_keys {
+    cursor: pointer;
+}
+
+.btn_pause,
+#formBtn {
+    width: 11.11%;
+}
+
+#score {
+    left: 98%;
+    transform: translateX(-100%);
+}
+
+#titleInterface {
+    z-index: 5;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+}
+
+#bot {
+    z-index: 1;
+    background-size: auto;
+    height: 8vh;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0%;
+    width: 100%
+}
+
+#botImg {
+    width: 100%;
+    height: 100%;
+}
+
+#livesDiv,
+#bulletsDiv {
+    z-index: 4;
+    position: absolute;
+    height: 50%;
+    width: 10%;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    background: #ffd81d;
+    border-radius: 10px 7.5px 10px 10px;
+    box-shadow: 0px 0px 5px 5px #dd621e;
+    color: black;
+    font-size: larger;
+}
+
+#bulletsDiv {
+    width: 15%;
+    left: 75%;
+}
+
+#livesImg {
+    position: absolute;
+    top: 45%;
+    left: 5%;
+    transform: translateY(-50%);
+    width: 50%;
+    padding: 5px;
+}
+
+#livesCount {
+    z-index: 4;
+    position: absolute;
+    text-align: center;
+    width: 50px;
+    top: 70%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+}
+
+#chainMonster {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translateY(-100%, -50%);
+}
+
+#chainDiv {
+    position: absolute;
+    width: 240px;
+    height: 120px;
+    top: 60px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+#chainMult,
+#chainMonsterDiv,
+#bonusChain {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    top: 50%;
+}
+
+#chainMult {
+    left: 100%;
+    transform: translate(-100%, -50%);
+    background: url("/template/style/ressources/chain.png");
+    background-size: cover;
+
+}
+
+#chainMonsterDiv {
+    visibility: hidden;
+    left: 0%;
+    transform: translateY(-50%);
+    background: url("/template/style/ressources/chain2.png");
+    background-size: cover;
+}
+
+#chainNb,
+#chainMonster,
+#bonusChain,
+#bonusScore {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#chainNb {
+    transform: translate(-50%, -20%);
+    font-size: x-large;
+    font-weight: bolder;
+}
+
+#bonusChain {
+    background: url("/template/style/ressources/bonus.gif");
+    background-size: cover;
+    visibility: hidden;
+}
+
+#bonusScore {
+    transform: translate(-50%, -40%);
+    font-size: xxx-large;
+    font-weight: bolder;
+    color: #40e0f0;
+    text-shadow: 0px 0px 6px black;
+}

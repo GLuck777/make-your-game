@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/template/style/style.css">
+
+    <!-- css du jeu -->
+    <link rel="stylesheet" href="/template/style/styles.css">
+    <link rel="stylesheet" href="/template/style/table.css">
+</head>
+
+<body>
+    <div id="borderJ"></div>
+    <div id="borderO"></div>
+    <div id="borderR"></div>
+    <div id="top">
+        <img id="topImg" src="/template/style/ressources/banner2.png">
+        <img id="logo" src="/template/style/ressources/logo.png">
+    </div>
+    <div id="left">
+        <img id="leftImg" src="/template/style/ressources/Left.png">
+    </div>
+    <div id="right">
+        <img id="rightImg" src="/template/style/ressources/right.png">
+    </div>
+    <div id="blueCorner"></div>
+    <div id="cornerBotLeft"></div>
+    <div id="cornerBotRight"></div>
+    <div id="game">
+        <div id="flou"></div>
+        <div id="interface">
+            <img id="titleInterface">
+            <img id="tuto" src="/template/style/ressources/tuto.gif">
+            <p id="history"></p>
+
+            <button class="btn_pause" id="playBtn">Start Story</button>
+            <button class="btn_pause" id="continueBtn">Endless Mode</button>
+            <button class="btn_pause" id="scoreBtn">Score</button>
+            <button class="btn_pause" id="restartBtn">Keys</button>
+            <div id="form">
+                <p id="form_score"></p>
+                <input id="form_username" text="enter your username" maxlength="23">
+                <button id="formBtn">Register</button>
+            </div>
+            <div id="div_keyboard">
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">Action</th>
+                            <th scope="col">Key</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <p>Move to the right</p>
+                            </td>
+                            <td>
+                                <button class="btn_keys" id="btn_right">Arrow Right</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Move to the left</p>
+                            </td>
+                            <td><button class="btn_keys" id="btn_left">Arrow Left</button></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Shoot</p>
+                            </td>
+                            <td>
+                                <button class="btn_keys" id="btn_shoot">Space</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Pause</p>
+                            </td>
+                            <td>
+                                <button class="btn_keys" id="btn_pause">Arrow Up</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="div_scoreboard">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="column" scope="col" id="scoreName">#</th>
+                            <th class="column" scope="col">Username</th>
+                            <th class="column" scope="col">Time</th>
+                            <th class="column" scope="col">Score</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tab_body_score">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="gameplay" id="player"></div>
+        
+        <div id="extra"></div>
+        <div id="monsters"></div>
+        <div class="playerBullet" id="playerBullet0"></div>
+        <div class="playerBullet" id="playerBullet1"></div>
+        <div class="playerBullet" id="playerBullet2"></div>
+        <div class="playerBullet" id="playerBullet3"></div>
+        <div class="playerBullet" id="playerBullet4"></div>
+        <div class="monsterBullet"></div>
+        <div class="monsterBullet"></div>
+        <div class="monsterBullet"></div>
+        <div id="bot">
+            <img id="botImg" src="/template/style/ressources/banner2.png">
+            <div id="livesDiv">
+                <img id="livesImg" src="/template/style/ressources/player.png">
+                <p id="livesCount"></p>
+            </div>
+            <div id="bulletsDiv"></div>
+        </div>
+        <div id="chainDiv">
+            <div id="chainMult"></div>
+            <div id="chainMonsterDiv">
+                <img id="chainMonster">
+            </div>
+            <div id="bonusChain">
+                <p id="bonusScore"></p>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="/game/src/views/app.js"></script>
+</body>
+
+</html>
