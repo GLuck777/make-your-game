@@ -7,7 +7,7 @@ import (
 	"make_your_game/internal/handler"
 )
 
-const port = ":8080"
+const port = "0.0.0.0:8080"
 
 func main() {
 	parseJS := http.FileServer(http.Dir("game"))
@@ -23,7 +23,7 @@ func main() {
 	http.HandleFunc("/StoryJSON", handler.StoryJSONHandler)
 	http.HandleFunc("/EndlessJSON", handler.EndlessJSONHandler)
 
-	fmt.Println("Server has started, it's now accessible on the following address: http://localhost" + port)
+	// fmt.Println("Server has started, it's now accessible on the following address: http://" + port)
 
 	err := http.ListenAndServe(port, nil)
 	if err != nil {
