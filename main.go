@@ -23,7 +23,7 @@ func main() {
 	http.HandleFunc("/StoryJSON", handler.StoryJSONHandler)
 	http.HandleFunc("/EndlessJSON", handler.EndlessJSONHandler)
 
-	// fmt.Println("Server has started, it's now accessible on the following address: http://" + port)
+	fmt.Println("Server has started, it's now accessible on the following address: http://" + port)
 
 	err := http.ListenAndServe(port, nil)
 	if err != nil {
