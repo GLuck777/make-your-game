@@ -23,9 +23,9 @@ func main() {
 	http.HandleFunc("/StoryJSON", handler.StoryJSONHandler)
 	http.HandleFunc("/EndlessJSON", handler.EndlessJSONHandler)
 
-	fmt.Println("Server has started, it's now accessible on the following address: http://" + port)
+	// fmt.Println("Server has started, it's now accessible on the following address: http://" + port)
 
-	err := http.ListenAndServe(port, nil)
+	err := http.ListenAndServe(":3000", nil)
 	if err != nil {
 		fmt.Println("gestion d'erreur 500")
 	}
